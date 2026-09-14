@@ -234,7 +234,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
     <table>
       <thead><tr><th>In ClickUp</th><th>In GoodDay</th></tr></thead>
       <tbody>
-        <tr><td>The brief was overwritten each time new client notes arrived</td><td>The Brief never changes. Each round gets its own numbered ticket with that round's notes and files</td></tr>
+        <tr><td>The brief was overwritten each time new client notes arrived</td><td>The original brief never changes. Round notes live in Revision brief and on a numbered ticket for that round</td></tr>
         <tr><td>Several date fields, and people worked to whichever one they opened</td><td>One box moves. <span class="f">Deadline</span> is this round's date, and you change it every round</td></tr>
         <tr><td>An SPV approval could carry a job further than intended</td><td>Two separate approval boxes. An SPV approval cannot skip Julius</td></tr>
         <tr><td>You told the editor in chat that it was coming back</td><td>The job returns on its own with a ticket, and the editor is told</td></tr>
@@ -380,7 +380,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
           <div class="shot-body" style="padding:4px 14px">
             <div class="field">
               <p class="fl">Brief *</p>
-              <p class="fh">Type or paste the whole brief here.</p>
+              <p class="fh">Type or paste the whole brief here. It lands at the top of the ticket as the job description and is never edited after that.</p>
               <div class="inputbox filled" style="line-height:1.5">15 second teaser for IG, vertical. Interview beat at the top, then B-roll…</div>
             </div>
             <div class="field">
@@ -533,29 +533,68 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
         </div>
       </figure>
       <p>Ask the editor how long the round will take rather than guessing, then put that date in.</p>
+      <p>Nothing moves this date for you. The moment a job goes into either revision state you and Julius both get a message asking you to set it, because a stale deadline is worse than no deadline.</p>
     </div>
   </div>
 
   <div class="step">
-    <div class="step-h"><span class="step-n">5</span><h3>Write your notes on the new ticket</h3></div>
+    <div class="step-h"><span class="step-n">5</span><h3>Write what to change, in two places</h3></div>
     <div class="step-body">
+      <p>First on the job, in <span class="b">Revision brief</span>. That is the box the editor actually reads.</p>
+      <figure>
+        <div class="shot">
+          <div class="shot-bar"><span class="dot"></span> PRO-15 · EP 99 CUTDOWN</div>
+          <div class="shot-body">
+            <div class="rowset">
+              <div class="row"><span class="k">Brief document</span><span class="v" style="color:var(--app-muted)">optional link to a deck or PDF</span></div>
+              <div class="row mk"><span class="k">Revision brief</span><span class="v">Cut the intro by 3 seconds. Music too loud under the VO. <span class="clickpin">write here</span></span></div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Revision brief is rewritten every round. It always holds the round the job is on right now.</figcaption>
+      </figure>
+      <p>Then paste the same notes onto the numbered ticket underneath the job.</p>
       <figure>
         <div class="shot">
           <div class="shot-bar"><span class="dot"></span> PRO-15 · Subtasks</div>
           <div class="shot-body">
             <div class="subs">
-              <div class="sub faded"><span class="ic done"></span> Internal revision 1 <span class="tag">closed</span></div>
-              <div class="sub mk"><span class="ic"></span> Internal revision 2 <span class="clickpin">write here</span></div>
+              <div class="sub faded"><span class="ic done"></span> Internal revision 1 <span class="tag">ROUND DONE</span></div>
+              <div class="sub mk"><span class="ic"></span> Internal revision 2 <span class="clickpin">paste here</span></div>
             </div>
           </div>
         </div>
-        <figcaption>The ticket appears by itself. It is created empty, so it is on you to say what needs changing.</figcaption>
+        <figcaption>The ticket appears by itself. It is created empty, so it is on you to fill it.</figcaption>
       </figure>
+      <p>Yes, that is the same text twice. Revision brief is overwritten next round, so without the copy on the ticket there would be no record of what round two actually asked for. GoodDay cannot copy one box into another, so it has to be a paste.</p>
 
       <div class="note dont">
-        <span class="lab">Never edit the Brief</span>
-        <p>The Brief is the original ask and it stays untouched for the life of the job. Overwriting it is the ClickUp habit that lost the studio its history. By round four nobody could see what was first agreed. Round notes go on the round's ticket.</p>
+        <span class="lab">Never edit the brief at the top</span>
+        <p>The brief at the top of the job is the original ask and it stays untouched for the life of the job. <span class="b">Revision brief</span> is the box that is meant to change. Overwriting the original is the ClickUp habit that lost the studio its history: by round four nobody could see what was first agreed.</p>
       </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-h"><span class="step-n">6</span><h3>The job comes back to you on its own</h3></div>
+    <div class="step-body">
+      <p>The editor does the work and sets the ticket to <span class="st" style="--c:var(--s-done)">ROUND DONE</span>. You do not chase anyone for a status change, and the editor never touches the job status.</p>
+      <figure>
+        <div class="shot">
+          <div class="shot-bar"><span class="dot"></span> PRO-15 · EP 99 CUTDOWN</div>
+          <div class="shot-body">
+            <div class="subs">
+              <div class="sub faded"><span class="ic done"></span> Internal revision 1 <span class="tag">ROUND DONE</span></div>
+              <div class="sub faded"><span class="ic done"></span> Internal revision 2 <span class="tag">ROUND DONE</span></div>
+            </div>
+            <div class="rowset" style="margin-top:10px">
+              <div class="row"><span class="k">Status</span><span class="v"><span class="st" style="--c:var(--s-internal)">INTERNAL REVIEW</span></span></div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Once every ticket on the job is ROUND DONE, the job moves itself back to INTERNAL REVIEW and you are messaged.</figcaption>
+      </figure>
+      <p>If a job is sitting in a revision state with every ticket already closed, something has gone wrong. Tell Joshua.</p>
     </div>
   </div>
 </section>
@@ -674,7 +713,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
           <div class="shot-bar"><span class="dot"></span> PRO-39 · Client revision 2</div>
           <div class="shot-body" style="padding:14px 16px">
             <p style="font-weight:600;margin:0 0 4px;font-size:13.4px">What the client asked for</p>
-            <p style="color:var(--app-muted);font-size:12.8px;margin:0 0 12px;line-height:1.55">Paste their words here. Write it here, not in the job's Brief.</p>
+            <p style="color:var(--app-muted);font-size:12.8px;margin:0 0 12px;line-height:1.55">Write the client's words in Revision brief on the job, then paste the same words here.</p>
             <p style="font-weight:600;margin:0 0 4px;font-size:13.4px">Everything they sent</p>
             <p style="color:var(--app-muted);font-size:12.8px;margin:0 0 12px;line-height:1.55">Attach the doc, the PDF or the extra footage to this ticket, and paste the Frame.io or Drive link here.</p>
             <p style="margin:0;font-size:12.8px;line-height:1.55">The deadline for this round is on the job, in the box called Deadline.</p>
@@ -727,13 +766,15 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
     <figcaption>Internal and client rounds are counted separately, so you can see at a glance whether the rounds are coming from inside the studio or from the client.</figcaption>
   </figure>
 
-  <p>Each ticket holds that round's notes and that round's files. Nothing is overwritten. Open a job a month later and you can read the whole history in order: the Brief at the top, then every round underneath it.</p>
+  <p>Each ticket holds that round's notes and that round's files. Nothing on a ticket is overwritten. Open a job a month later and you can read the whole history in order: the original brief at the top of the job, then every round underneath it.</p>
+  <p><span class="f">Revision brief</span> on the job is the exception. It is deliberately overwritten each round, because its job is to answer one question: what is this job waiting on right now.</p>
 
   <div class="tbl-scroll">
     <table>
       <thead><tr><th>Lives on the job</th><th>Lives on the round's ticket</th></tr></thead>
       <tbody>
-        <tr><td>The <span class="f">Brief</span>, never edited</td><td>What to change this round</td></tr>
+        <tr><td>The brief at the top, never edited</td><td>What to change this round, kept for good</td></tr>
+        <tr><td><span class="f">Revision brief</span>, this round only</td><td>The paste that keeps the record</td></tr>
         <tr><td><span class="f">Deadline</span>, the live date</td><td>The files and links for this round</td></tr>
         <tr><td>The round counters</td><td>Whether the round is finished</td></tr>
       </tbody>
@@ -842,7 +883,8 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
         <tr><td>Status reaches INTERNAL REVIEW</td><td>The named SPV is messaged and the job enters their list</td></tr>
         <tr><td>SPV approves</td><td>Status becomes FINAL REVIEW, Julius is messaged, Review result is cleared</td></tr>
         <tr><td>Julius approves at final</td><td>Status becomes CLIENT REVIEW and the sent to client date is stamped</td></tr>
-        <tr><td>Anyone asks for changes</td><td>Status moves back, the round counter goes up by one, a numbered ticket is made and given to the editor, and the editor is told</td></tr>
+        <tr><td>Anyone asks for changes</td><td>Status moves back, the round counter goes up by one, a numbered ticket is made and given to the editor, the editor is told, and you and Julius are asked to set the new Deadline</td></tr>
+        <tr><td>Every ticket on a job is set to ROUND DONE</td><td>The job moves itself back to INTERNAL REVIEW and the SPV is messaged</td></tr>
         <tr><td>Client approves</td><td>Status becomes APPROVED, date done is stamped, the list is cleared</td></tr>
         <tr><td>7am the day before a deadline</td><td>Whoever holds the job is reminded, but only while it is on their desk</td></tr>
       </tbody>
@@ -851,7 +893,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 
   <h3 style="font-size:17.5px;font-weight:600;margin:28px 0 10px">What it will not do</h3>
   <ul>
-    <li><strong>Set the deadline for you.</strong> GoodDay cannot work out how long a round should take. Every new date is your decision.</li>
+    <li><strong>Set the deadline for you.</strong> GoodDay cannot work out how long a round should take, and we decided on purpose not to let it guess. Every new date is your decision. All the system does is ask you for it.</li>
     <li><strong>Write the notes for you.</strong> The ticket is made empty. If nobody writes what to change, the editor gets a numbered ticket that says nothing.</li>
     <li><strong>Show a countdown in a message.</strong> GoodDay notifications cannot print a date or "5 days remaining". That is what the 7am message and the red overdue marker are for.</li>
     <li><strong>Undo a wrong approval.</strong> If you approve at final review, the file is marked as sent to the client today. There is no way to un-stamp that date.</li>
@@ -861,9 +903,9 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 
   <h3 style="font-size:17.5px;font-weight:600;margin:0 0 10px">The short version</h3>
   <ol>
-    <li><strong>SPV:</strong> <span class="f">Review result</span> at internal review. Set the new <span class="f">Deadline</span> whenever you send it back.</li>
+    <li><strong>SPV:</strong> <span class="f">Review result</span> at internal review. Set the new <span class="f">Deadline</span> whenever you send it back, and write <span class="f">Revision brief</span>.</li>
     <li><strong>Julius at final review:</strong> <span class="f">Final approval</span>. Approving means it goes out today.</li>
-    <li><strong>Julius at client review:</strong> <span class="f">Review result</span> again. Client notes and files go on the ticket, never in the Brief.</li>
+    <li><strong>Julius at client review:</strong> <span class="f">Review result</span> again. Client notes go in <span class="f">Revision brief</span> and get pasted onto the ticket. Never in the brief at the top.</li>
     <li><strong>Everyone:</strong> one date box moves, and it is <span class="f">Deadline</span>.</li>
     <li><strong>Attendance:</strong> set the approval field, never the status. Paid leave is a deliberate choice.</li>
   </ol>
