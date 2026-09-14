@@ -850,22 +850,54 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
   </div>
 
   <div class="step">
-    <div class="step-h"><span class="step-n">3</span><h3>Use the standup to decide who gets the next job</h3></div>
+    <div class="step-h"><span class="step-n">3</span><h3>Decide who gets the next job</h3></div>
     <div class="step-body">
+      <p>Nobody is asked how busy they feel any more. Two views answer it from work that is already on the board.</p>
+
+      <p><strong>On whose desk</strong>, a tab on Production, groups every job by <span class="f">Action required</span>. That is the honest picture of right now, because a job sitting at INTERNAL REVIEW or CLIENT REVIEW is open but is not on the editor. An editor with no rows under their name has nothing waiting on them.</p>
       <figure>
         <div class="shot">
-          <div class="shot-bar"><span class="dot"></span> Attendance · All records</div>
+          <div class="shot-bar"><span class="dot"></span> Production &middot; On whose desk</div>
           <div class="shot-body">
-            <div class="rowset">
-              <div class="row"><span class="k">Editor A</span><span class="v">EP 99 CUTDOWN · <span style="color:var(--s-crevision)">Full</span></span></div>
-              <div class="row"><span class="k">Editor B</span><span class="v">BRAND REEL · <span style="color:var(--s-editing)">Light</span></span></div>
-              <div class="row mk"><span class="k">Editor C</span><span class="v">no job · <span style="color:var(--s-todo)">Standby</span> <span class="clickpin">free today</span></span></div>
+            <div class="subs">
+              <div class="sub"><span class="ic"></span> Editor A <span class="tag">4 jobs</span></div>
+              <div class="sub"><span class="ic"></span> Editor B <span class="tag">1 job</span></div>
+              <div class="sub mk"><span class="ic"></span> Editor C <span class="clickpin">nothing waiting</span></div>
             </div>
           </div>
         </div>
-        <figcaption>The <strong>How heavy is today?</strong> answer on each standup is the number that shows who has room.</figcaption>
+        <figcaption>Grouped by Action required. No rows under a name means nothing is waiting on that person today.</figcaption>
       </figure>
-      <p>It only works if people answer honestly, which means Standby has to be safe to say. If someone is punished for saying Standby once, the whole field stops being useful.</p>
+
+      <p><strong>Workload</strong>, also on Production, is the forward view. It spreads each job's <span class="f">Estimate</span> across its <span class="f">Start / End</span> and stacks it per person, so you can see who is booked solid next week.</p>
+
+      <div class="note watch">
+        <span class="lab">Workload shows what someone is committed to, not what they are doing</span>
+        <p>It is built from estimates and dates, not from hours anyone logged. If an editor finishes a job two days early, Workload still shows those two days as full. So read Workload for the weeks ahead and <strong>On whose desk</strong> for today. Where they disagree, On whose desk is right.</p>
+      </div>
+
+      <p>Both need three things on a job to work: an assignee, a Start and End, and an Estimate. The intake form makes all three compulsory, so the only jobs that fall through are freelancer ones with nobody assigned, and those show under Not assigned.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-h"><span class="step-n">4</span><h3>Read one person's week</h3></div>
+    <div class="step-body">
+      <p>Open <strong>All records</strong> in Attendance. It is grouped by person, so each editor's days sit together.</p>
+      <figure>
+        <div class="shot">
+          <div class="shot-bar"><span class="dot"></span> Attendance &middot; All records</div>
+          <div class="shot-body">
+            <div class="subs">
+              <div class="sub"><span class="ic done"></span> Editor A <span class="tag">6 days</span></div>
+              <div class="sub"><span class="ic done"></span> Editor B <span class="tag">5 days</span></div>
+              <div class="sub"><span class="ic"></span> Not assigned <span class="tag">older records</span></div>
+            </div>
+          </div>
+        </div>
+        <figcaption>Grouped by the name each person picked on their standup. Anything under Not assigned is from before the form asked for a name.</figcaption>
+      </figure>
+      <p>One standup is one day. If you see the same person twice on one date, that is a mistake worth correcting, because it reads as two days worked. A second job on the same day belongs in <span class="f">Other work today</span>, not in a second standup.</p>
     </div>
   </div>
 </section>
