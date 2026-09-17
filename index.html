@@ -5,55 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="How SPVs and Julius approve work, set deadlines and answer time off in GoodDay.">
 <meta name="robots" content="noindex">
-<title>Planaria Leadership Handbook</title>
+<title>Leadership Workflow in GoodDay</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
 <style>html,body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
-<title>Planaria Leadership Handbook</title>
+<title>Leadership Workflow in GoodDay</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@600;700;800&family=Public+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
 
 <style>
 :root{
-  --ground:#F1F4F7; --surface:#FFFFFF; --surface-2:#F7F9FB;
-  --ink:#12171D; --ink-2:#3D4752; --muted:#69737F;
-  --rule:#DCE3EA; --rule-2:#EDF1F5;
+  --ground:#FAFAF7; --surface:#FFFFFF; --surface-2:#F4F4F1;
+  --ink:#000000; --ink-2:#2E2E2E; --muted:#6B6B68;
+  --rule:#E4E4DF; --rule-2:#EFEFEA;
   --app-bg:#1D2430; --app-ink:#E4E9EF; --app-rule:#333D4C; --app-muted:#8794A4;
-  --ring:#12171D;
+  --ring:#000000; --acc:#000000; --neon:#9DFF00;
   --s-todo:#28AEF0; --s-editing:#43C464; --s-internal:#FF841F; --s-final:#7F5AF2;
   --s-creview:#DE35C1; --s-crevision:#FF6157; --s-done:#7C848F;
   --ok:#1E874B; --warn:#B8571A; --stop:#C0342B;
-  --mark:#FFC93C; --mark-ink:#7A5600;
+  --mark:#FFC93C; --mark-ink:#6B4A00;
   --maxw:74ch;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --ground:#0E1319; --surface:#161C24; --surface-2:#1B222B;
-    --ink:#E8EDF2; --ink-2:#BDC7D2; --muted:#8B97A4;
-    --rule:#28313C; --rule-2:#202832;
+    --ground:#151515; --surface:#212121; --surface-2:#1C1C1C;
+    --ink:#F4F4F2; --ink-2:#C9C9C6; --muted:#8E8E8A;
+    --rule:#343434; --rule-2:#282828;
     --app-bg:#10161E; --app-ink:#DDE4EB; --app-rule:#2B3542; --app-muted:#7D8A99;
-    --ring:#E8EDF2; --ok:#4FC183; --warn:#E9974A; --stop:#F0736A;
+    --ring:#9DFF00; --acc:#9DFF00; --neon:#9DFF00; --ok:#4FC183; --warn:#E9974A; --stop:#F0736A;
   }
 }
 :root[data-theme="dark"]{
-  --ground:#0E1319; --surface:#161C24; --surface-2:#1B222B;
-  --ink:#E8EDF2; --ink-2:#BDC7D2; --muted:#8B97A4;
-  --rule:#28313C; --rule-2:#202832;
+  --ground:#151515; --surface:#212121; --surface-2:#1C1C1C;
+  --ink:#F4F4F2; --ink-2:#C9C9C6; --muted:#8E8E8A;
+  --rule:#343434; --rule-2:#282828;
   --app-bg:#10161E; --app-ink:#DDE4EB; --app-rule:#2B3542; --app-muted:#7D8A99;
-  --ring:#E8EDF2; --ok:#4FC183; --warn:#E9974A; --stop:#F0736A;
+  --ring:#9DFF00; --acc:#9DFF00; --neon:#9DFF00; --ok:#4FC183; --warn:#E9974A; --stop:#F0736A;
 }
 
 *{box-sizing:border-box}
-body{background:var(--ground);color:var(--ink);font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-family:"Archivo",system-ui,sans-serif;letter-spacing:-0.021em;text-wrap:balance;margin:0}
+a{color:var(--ink);text-underline-offset:3px;text-decoration-thickness:1.5px;text-decoration-color:var(--muted)}
+a:hover{text-decoration-color:var(--ink);background:var(--card-2)}
+body{background:var(--ground);background-image:radial-gradient(120% 90% at 50% 0%,rgba(255,255,255,.035),transparent 60%);color:var(--ink);font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Asta Sans",system-ui,sans-serif;letter-spacing:-0.021em;text-wrap:balance;margin:0}
 code,.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
 
 .topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ground) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 .topbar-in{max-width:1180px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:9px;font-family:"Archivo";font-weight:700;font-size:14px}
-.brand-mark{width:24px;height:24px;border-radius:6px;background:var(--ink);color:var(--ground);display:grid;place-items:center;font-size:11px;font-weight:700}
+.brand{display:flex;align-items:center;gap:9px;font-family:"Asta Sans";font-weight:700;font-size:14px}
+.brand-mark{display:grid;place-items:center;flex:0 0 auto;color:var(--ink)}
+.brand-mark svg{width:19px;height:auto;display:block;fill:currentColor}
 .aud{margin-left:auto;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:4px 11px}
 
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px 90px;display:grid;grid-template-columns:218px minmax(0,1fr);gap:44px}
@@ -80,7 +83,7 @@ h1{font-size:clamp(29px,5vw,42px);line-height:1.08;font-weight:700;margin-bottom
 .clip{flex:0 0 auto;border-radius:6px;padding:9px 12px 10px;min-width:104px;border:1px solid var(--rule-2);background:var(--surface-2);position:relative}
 .clip::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px;background:var(--c)}
 .clip .n{font-family:"JetBrains Mono";font-size:9.5px;color:var(--muted);display:block;margin-bottom:3px}
-.clip .t{font-family:"Archivo";font-weight:600;font-size:11.5px;line-height:1.25;display:block}
+.clip .t{font-family:"Asta Sans";font-weight:600;font-size:11.5px;line-height:1.25;display:block}
 .clip .who{font-size:10.5px;color:var(--muted);display:block;margin-top:4px}
 .clip.you{background:color-mix(in srgb,var(--c) 13%,var(--surface));border-color:color-mix(in srgb,var(--c) 40%,var(--rule))}
 
@@ -144,7 +147,7 @@ figcaption{font-size:12.8px;color:var(--muted);margin-top:8px;line-height:1.5}
 .opt.dim{opacity:.4}
 
 .msg{background:var(--app-bg);border:1px solid var(--app-rule);border-radius:11px;padding:16px 17px;color:var(--app-ink)}
-.msg .h{font-family:"Archivo";font-weight:600;font-size:14.5px;margin:0 0 9px}
+.msg .h{font-family:"Asta Sans";font-weight:600;font-size:14.5px;margin:0 0 9px}
 .msg p{margin:0 0 9px;font-size:13.6px;line-height:1.58;color:var(--app-ink);max-width:none}
 .msg p:last-child{margin-bottom:0}
 .msg .b{font-weight:700}
@@ -179,7 +182,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 
 <div class="topbar">
   <div class="topbar-in">
-    <span class="brand"><span class="brand-mark">P</span> Planaria Studio</span>
+    <span class="brand"><span class="brand-mark"><svg viewBox="0 0 497 662" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="83" y="0" width="332" height="83" rx="41.5"/><rect x="0" y="83" width="83" height="497" rx="41.5"/><rect x="415" y="83" width="82" height="247" rx="41"/><rect x="248" y="330" width="167" height="83" rx="41.5"/><rect x="248" y="330" width="83" height="250" rx="41.5"/><rect x="83" y="580" width="165" height="82" rx="41"/></svg></span> Planaria Studio</span>
     <span class="aud">For SPVs &amp; Julius</span>
   </div>
 </div>
@@ -196,7 +199,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
     <li><a href="#final">5 · Julius: final review</a></li>
     <li><a href="#client">6 · Julius: client review</a></li>
     <li><a href="#log">7 · The revision log</a></li>
-    <li><a href="#att">8 · Attendance</a></li>
+    <li><a href="#who">8 · Who gets the next job</a></li>
     <li><a href="#auto">9 · What runs itself</a></li>
   </ol>
 </nav>
@@ -204,8 +207,13 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 <main>
 
 <p class="eyebrow">GoodDay handbook · September 2026</p>
-<h1>Approving work, setting dates, answering time off</h1>
+<h1>Approving work and setting dates</h1>
 <p class="standfirst">Three gates and one date box. Every step here shows the screen and where to click on it.</p>
+
+<div class="note">
+  <span class="lab">Answering time off moved</span>
+  <p>Approving sick days and days off is now in <strong>Attendance &amp; Compensation Policy</strong>, clause 3.6, together with the rules staff are reading. One page for the whole studio instead of the same thing written twice.</p>
+</div>
 
 <div class="track-wrap">
   <p class="track-cap">Who holds the job at each stage</p>
@@ -788,69 +796,11 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 </section>
 
 <!-- 8 -->
-<section id="att">
-  <div class="sec-head"><span class="sec-num">08</span><h2>Attendance</h2></div>
-  <p>Julius answers every request. The approval box does the rest.</p>
+<section id="who">
+  <div class="sec-head"><span class="sec-num">08</span><h2>Who gets the next job</h2></div>
 
   <div class="step">
-    <div class="step-h"><span class="step-n">1</span><h3>Open Attendance and click Awaiting approval</h3></div>
-    <div class="step-body">
-      <figure>
-        <div class="shot">
-          <div class="shot-bar"><span class="dot"></span> Attendance</div>
-          <div class="shot-body">
-            <div class="tabs">
-              <div class="tab">Daily Standup</div>
-              <div class="tab">Time Off Request</div>
-              <div class="tab">Calendar</div>
-              <div class="tab on mk">Awaiting approval <span class="clickpin">click</span></div>
-              <div class="tab">All records</div>
-            </div>
-          </div>
-        </div>
-        <figcaption>Everything sitting in this view needs an answer from you.</figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-h"><span class="step-n">2</span><h3>Set the approval field. The status follows</h3></div>
-    <div class="step-body">
-      <figure>
-        <div class="shot">
-          <div class="shot-bar"><span class="dot"></span> Time off · 13 Sep</div>
-          <div class="shot-body">
-            <div class="rowset">
-              <div class="row"><span class="k">Status</span><span class="v"><span class="st" style="--c:var(--s-todo)">REQUESTED</span></span></div>
-              <div class="row"><span class="k">Type</span><span class="v">Day off</span></div>
-              <div class="row mk"><span class="k">Approval</span><span class="v" style="color:var(--app-muted)">empty <span class="clickpin">click</span></span></div>
-            </div>
-          </div>
-        </div>
-        <figcaption>Do not change the status by hand. Setting approval moves the request and clears it out of your list.</figcaption>
-      </figure>
-
-      <div class="tbl-scroll">
-        <table>
-          <thead><tr><th>What you set</th><th>Status becomes</th><th>Why it matters</th></tr></thead>
-          <tbody>
-            <tr><td>Approve a sick day</td><td><span class="st" style="--c:var(--s-done)">SICK</span></td><td>Keeps illness separate from leave in the record</td></tr>
-            <tr><td>Approve a day off</td><td><span class="st" style="--c:var(--s-done)">DAY OFF</span></td><td>Unpaid unless you mark it paid</td></tr>
-            <tr><td>Mark as paid leave</td><td><span class="st" style="--c:var(--s-done)">PAID LEAVE</span></td><td>Payroll depends on this one. It is the only place paid leave is separated from an ordinary day off</td></tr>
-            <tr><td>Decline</td><td><span class="st" style="--c:var(--s-crevision)">DECLINED</span></td><td>Covers both sick and day off</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="note watch">
-        <span class="lab">Self-approval is watched, not blocked</span>
-        <p>GoodDay cannot stop a person approving their own day off. Instead, any change to an approval field raises an alert. It is not an accusation. It is what lets us say the record is trustworthy without locking anything down.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-h"><span class="step-n">3</span><h3>Decide who gets the next job</h3></div>
+    <div class="step-h"><span class="step-n">1</span><h3>Read the two views before you assign</h3></div>
     <div class="step-body">
       <p>Nobody is asked how busy they feel any more. Two views answer it from work that is already on the board.</p>
 
@@ -880,26 +830,6 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
     </div>
   </div>
 
-  <div class="step">
-    <div class="step-h"><span class="step-n">4</span><h3>Read one person's week</h3></div>
-    <div class="step-body">
-      <p>Open <strong>All records</strong> in Attendance. It is grouped by person, so each editor's days sit together.</p>
-      <figure>
-        <div class="shot">
-          <div class="shot-bar"><span class="dot"></span> Attendance &middot; All records</div>
-          <div class="shot-body">
-            <div class="subs">
-              <div class="sub"><span class="ic done"></span> Editor A <span class="tag">6 days</span></div>
-              <div class="sub"><span class="ic done"></span> Editor B <span class="tag">5 days</span></div>
-              <div class="sub"><span class="ic"></span> Not assigned <span class="tag">older records</span></div>
-            </div>
-          </div>
-        </div>
-        <figcaption>Grouped by the name each person picked on their standup. Anything under Not assigned is from before the form asked for a name.</figcaption>
-      </figure>
-      <p>One standup is one day. If you see the same person twice on one date, that is a mistake worth correcting, because it reads as two days worked. A second job on the same day belongs in <span class="f">Other work today</span>, not in a second standup.</p>
-    </div>
-  </div>
 </section>
 
 <!-- 9 -->
@@ -943,13 +873,13 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
   </ol>
 
   <footer>
-    <p>Planaria Studio · GoodDay handbook for SPVs and Julius · September 2026. If something here does not match what you see on screen, the screen is right and this page is out of date. Tell Joshua.</p>
+    <p>Planaria Studio · Leadership workflow in GoodDay · for SPVs and Julius · September 2026. If something here does not match what you see on screen, the screen is right and this page is out of date.</p>
   </footer>
 </section>
 
 </main>
 </div>
-<script>window.__GUIDE_NAV__ = [{"href":"Planaria-Leadership-Handbook.pdf","label":"PDF"}];</script>
+<script>window.__GUIDE_NAV__ = [{"href":"https://planariastudio.github.io/planaria-employee-handbook/","label":"Handbook"},{"href":"https://planariastudio.github.io/attendance-policy/","label":"Attendance & pay"},{"href":"Planaria-Leadership-Handbook.pdf","label":"PDF"}];</script>
 <script>
 // Adds the cross-links into the guide's own top bar. Keeps the guide files themselves
 // untouched, so the same file can be published as an artifact or to the web.
