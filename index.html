@@ -195,9 +195,9 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
     <li><a href="#change">1 · What changed</a></li>
     <li><a href="#open">2 · Opening a job</a></li>
     <li><a href="#dates">3 · The three dates</a></li>
-    <li><a href="#spv">4 · SPV: internal review</a></li>
+    <li><a href="#spv">4 · SPV review</a></li>
     <li><a href="#final">5 · Julius: final review</a></li>
-    <li><a href="#client">6 · Julius: client review</a></li>
+    <li><a href="#client">6 · Julius and the client</a></li>
     <li><a href="#log">7 · The revision log</a></li>
     <li><a href="#who">8 · Who gets the next job</a></li>
     <li><a href="#auto">9 · What runs itself</a></li>
@@ -220,10 +220,10 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
   <div class="track">
     <div class="clip" style="--c:var(--s-todo)"><span class="n">01</span><span class="t">TO DO</span><span class="who">Editor</span></div>
     <div class="clip" style="--c:var(--s-editing)"><span class="n">02</span><span class="t">EDITING</span><span class="who">Editor</span></div>
-    <div class="clip you" style="--c:var(--s-internal)"><span class="n">03</span><span class="t">INTERNAL REVIEW</span><span class="who">SPV</span></div>
+    <div class="clip you" style="--c:var(--s-internal)"><span class="n">03</span><span class="t">SENT TO SPV</span><span class="who">SPV</span></div>
     <div class="clip" style="--c:var(--s-crevision)"><span class="n">04</span><span class="t">INTERNAL REVISION</span><span class="who">Editor</span></div>
     <div class="clip you" style="--c:var(--s-final)"><span class="n">05</span><span class="t">FINAL REVIEW</span><span class="who">Julius</span></div>
-    <div class="clip you" style="--c:var(--s-creview)"><span class="n">06</span><span class="t">CLIENT REVIEW</span><span class="who">Julius</span></div>
+    <div class="clip you" style="--c:var(--s-creview)"><span class="n">06</span><span class="t">SENT TO CLIENT</span><span class="who">Julius</span></div>
     <div class="clip" style="--c:var(--s-crevision)"><span class="n">07</span><span class="t">CLIENT REVISION</span><span class="who">Editor</span></div>
     <div class="clip" style="--c:var(--s-done)"><span class="n">08</span><span class="t">APPROVED</span><span class="who">Finished</span></div>
   </div>
@@ -390,7 +390,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
           <div class="shot-body" style="padding:4px 14px">
             <div class="field">
               <p class="fl">Project Owner *</p>
-              <p class="fh">The SPV who will check this job at internal review.</p>
+              <p class="fh">The SPV who will check this job once the cut is ready.</p>
               <div class="inputbox mk">Not assigned <span class="clickpin">click</span></div>
             </div>
             <div class="field">
@@ -409,7 +409,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 
       <div class="note watch">
         <span class="lab">Project Owner is not decoration</span>
-        <p>Whoever you name here is the person the job goes to at internal review. It puts the job in their list and sends them the message. Name the wrong person and the cut sits in the wrong list. Leave it empty and nobody is told at all.</p>
+        <p>Whoever you name here is the person the job goes to at SENT TO SPV. It puts the job in their list and sends them the message. Name the wrong person and the cut sits in the wrong list. Leave it empty and nobody is told at all.</p>
       </div>
     </div>
   </div>
@@ -521,7 +521,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 
 <!-- 4 -->
 <section id="spv">
-  <div class="sec-head"><span class="sec-num">04</span><h2>SPV at internal review</h2></div>
+  <div class="sec-head"><span class="sec-num">04</span><h2>SPV review</h2></div>
   <p>Your gate. Every cut passes through it, including every client round.</p>
 
   <div class="step">
@@ -548,7 +548,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
           <div class="shot-bar"><span class="dot"></span> PRO-15 · EP 99 CUTDOWN</div>
           <div class="shot-body">
             <div class="rowset">
-              <div class="row"><span class="k">Status</span><span class="v"><span class="st" style="--c:var(--s-internal)">INTERNAL REVIEW</span></span></div>
+              <div class="row"><span class="k">Status</span><span class="v"><span class="st" style="--c:var(--s-internal)">SENT TO SPV</span></span></div>
               <div class="row"><span class="k">Action required</span><span class="v">You</span></div>
               <div class="row"><span class="k">Deadline</span><span class="v">Sep 18</span></div>
               <div class="row mk"><span class="k">Review result</span><span class="v" style="color:var(--app-muted)">empty <span class="clickpin">click</span></span></div>
@@ -662,11 +662,11 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
               <div class="sub faded"><span class="ic done"></span> Internal revision 2 <span class="tag">ROUND DONE</span></div>
             </div>
             <div class="rowset" style="margin-top:10px">
-              <div class="row"><span class="k">Status</span><span class="v"><span class="st" style="--c:var(--s-internal)">INTERNAL REVIEW</span></span></div>
+              <div class="row"><span class="k">Status</span><span class="v"><span class="st" style="--c:var(--s-internal)">SENT TO SPV</span></span></div>
             </div>
           </div>
         </div>
-        <figcaption>Once every ticket on the job is ROUND DONE, the job moves itself back to INTERNAL REVIEW and you are messaged.</figcaption>
+        <figcaption>Once every ticket on the job is ROUND DONE, the job moves itself back to SENT TO SPV and you are messaged.</figcaption>
       </figure>
       <p>If a job is sitting in a revision state with every ticket already closed, something has gone wrong. Tell Joshua.</p>
     </div>
@@ -686,7 +686,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
           <p class="h">🎯 Final review - your call</p>
           <p>🎯 This one passed the SPV and is now your call.</p>
           <p>Your field is <span class="b">Final approval</span>, not Review result, which belongs to the SPV. Set it to <span class="b">Approved</span> or <span class="b">Needs revision</span>.</p>
-          <p>⚠️ <span class="b">Approving sends it.</span> The job moves itself straight to <span class="b">CLIENT REVIEW</span> and today is stamped as the day the client got it, so only approve when the file is actually going out today.</p>
+          <p>⚠️ <span class="b">Approving sends it.</span> The job moves itself straight to <span class="b">SENT TO CLIENT</span> and today is stamped as the day the client got it, so only approve when the file is actually going out today.</p>
         </div>
       </figure>
     </div>
@@ -722,7 +722,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
       <div class="split">
         <div class="outcome">
           <p class="ot" style="color:var(--ok)">Approved</p>
-          <p>Goes straight to <span class="st" style="--c:var(--s-creview)">CLIENT REVIEW</span>, and today is stamped as the day the client got it.</p>
+          <p>Goes straight to <span class="st" style="--c:var(--s-creview)">SENT TO CLIENT</span>, and today is stamped as the day the client got it.</p>
         </div>
         <div class="outcome">
           <p class="ot" style="color:var(--warn)">Needs revision</p>
@@ -745,7 +745,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 
 <!-- 6 -->
 <section id="client">
-  <div class="sec-head"><span class="sec-num">06</span><h2>Julius at client review</h2></div>
+  <div class="sec-head"><span class="sec-num">06</span><h2>Julius, once it is with the client</h2></div>
   <p>Now you are passing on what the client said, and the field changes back.</p>
 
   <div class="step">
@@ -756,7 +756,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
           <div class="shot-bar"><span class="dot"></span> PRO-15 · EP 99 CUTDOWN</div>
           <div class="shot-body">
             <div class="rowset">
-              <div class="row"><span class="k">Status</span><span class="v"><span class="st" style="--c:var(--s-creview)">CLIENT REVIEW</span></span></div>
+              <div class="row"><span class="k">Status</span><span class="v"><span class="st" style="--c:var(--s-creview)">SENT TO CLIENT</span></span></div>
               <div class="row"><span class="k">Action required</span><span class="v">You</span></div>
               <div class="row"><span class="k">Sent to client on</span><span class="v">Sep 13</span></div>
               <div class="row mk"><span class="k">Review result</span><span class="v" style="color:var(--app-muted)">empty <span class="clickpin">click</span></span></div>
@@ -892,7 +892,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
     <div class="step-body">
       <p>Nobody is asked how busy they feel any more. Two views answer it from work that is already on the board.</p>
 
-      <p><strong>On whose desk</strong>, a tab on Projects, groups every job by <span class="f">Action required</span>. That is the honest picture of right now, because a job sitting at INTERNAL REVIEW or CLIENT REVIEW is open but is not on the editor. An editor with no rows under their name has nothing waiting on them.</p>
+      <p><strong>On whose desk</strong>, a tab on Projects, groups every job by <span class="f">Action required</span>. That is the honest picture of right now, because a job sitting at SENT TO SPV or SENT TO CLIENT is open but is not on the editor. An editor with no rows under their name has nothing waiting on them.</p>
       <figure>
         <div class="shot">
           <div class="shot-bar"><span class="dot"></span> Projects &middot; On whose desk</div>
@@ -930,11 +930,11 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
       <thead><tr><th>When</th><th>What happens by itself</th></tr></thead>
       <tbody>
         <tr><td>A job is created on the form</td><td>The SPV and Joshua are added to it, the editor is briefed, and a freelancer job goes to Julius</td></tr>
-        <tr><td>Status reaches INTERNAL REVIEW</td><td>The named SPV is messaged and the job enters their list</td></tr>
+        <tr><td>Status reaches SENT TO SPV</td><td>The named SPV is messaged and the job enters their list</td></tr>
         <tr><td>SPV approves</td><td>Status becomes FINAL REVIEW, Julius is messaged, Review result is cleared</td></tr>
-        <tr><td>Julius approves at final</td><td>Status becomes CLIENT REVIEW and the sent to client date is stamped</td></tr>
+        <tr><td>Julius approves at final</td><td>Status becomes SENT TO CLIENT and the sent to client date is stamped</td></tr>
         <tr><td>Anyone asks for changes</td><td>Status moves back, the round counter goes up by one, a numbered ticket is made and given to the editor, the editor is told, and you and Julius are asked to set the new Deadline</td></tr>
-        <tr><td>Every ticket on a job is set to ROUND DONE</td><td>The job moves itself back to INTERNAL REVIEW and the SPV is messaged</td></tr>
+        <tr><td>Every ticket on a job is set to ROUND DONE</td><td>The job moves itself back to SENT TO SPV and the SPV is messaged</td></tr>
         <tr><td>Client approves</td><td>Status becomes APPROVED, date done is stamped, the list is cleared</td></tr>
         <tr><td>7am the day before a deadline</td><td>Whoever holds the job is reminded, but only while it is on their desk</td></tr>
       </tbody>
@@ -953,9 +953,9 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 
   <h3 style="font-size:17.5px;font-weight:600;margin:0 0 10px">The short version</h3>
   <ol>
-    <li><strong>SPV:</strong> <span class="f">Review result</span> at internal review. Set the new <span class="f">Deadline</span> whenever you send it back, and write <span class="f">Revision brief</span>.</li>
+    <li><strong>SPV:</strong> <span class="f">Review result</span> at SENT TO SPV. Set the new <span class="f">Deadline</span> whenever you send it back, and write <span class="f">Revision brief</span>.</li>
     <li><strong>Julius at final review:</strong> <span class="f">Final approval</span>. Approving means it goes out today.</li>
-    <li><strong>Julius at client review:</strong> <span class="f">Review result</span> again. Client notes go in <span class="f">Revision brief</span> and get pasted onto the ticket. Never in the brief at the top.</li>
+    <li><strong>Julius at SENT TO CLIENT:</strong> <span class="f">Review result</span> again. Client notes go in <span class="f">Revision brief</span> and get pasted onto the ticket. Never in the brief at the top.</li>
     <li><strong>Everyone:</strong> one date box moves, and it is <span class="f">Deadline</span>.</li>
     <li><strong>Attendance:</strong> set the approval field, never the status. Paid leave is a deliberate choice.</li>
   </ol>
