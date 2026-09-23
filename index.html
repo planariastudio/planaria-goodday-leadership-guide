@@ -242,7 +242,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
     <table>
       <thead><tr><th>In ClickUp</th><th>In GoodDay</th></tr></thead>
       <tbody>
-        <tr><td>The brief was overwritten each time new client notes arrived</td><td>The original brief never changes. Round notes live in Revision brief and on a numbered ticket for that round</td></tr>
+        <tr><td>The brief was overwritten each time new client notes arrived</td><td>The original brief never changes. Each round's notes live on that round's numbered ticket and are never overwritten</td></tr>
         <tr><td>Several date fields, and people worked to whichever one they opened</td><td>One box moves. <span class="f">Deadline</span> is this round's date, and you change it every round</td></tr>
         <tr><td>An SPV approval could carry a job further than intended</td><td>Two separate approval boxes. An SPV approval cannot skip Julius</td></tr>
         <tr><td>You told the editor in chat that it was coming back</td><td>The job returns on its own with a ticket, and the editor is told</td></tr>
@@ -467,7 +467,13 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
             </div>
             <div class="field">
               <p class="fl">Main Asset *</p>
+              <p class="fh">A link. Footage lives on Drive or Frame.io, so paste the link rather than trying to move the files.</p>
               <div class="inputbox filled">drive.google.com/…</div>
+            </div>
+            <div class="field">
+              <p class="fl">Main Asset file</p>
+              <p class="fh">Optional, and for documents only. A brief deck, a reference PDF, a script. Upload it here and it stays with the job. Never footage.</p>
+              <div class="inputbox">attach a file</div>
             </div>
             <div class="field">
               <p class="fl">Estimate - how big is this job? *</p>
@@ -623,22 +629,22 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
   </div>
 
   <div class="step">
-    <div class="step-h"><span class="step-n">5</span><h3>Write what to change, in two places</h3></div>
+    <div class="step-h"><span class="step-n">5</span><h3>Write what to change, on the ticket</h3></div>
     <div class="step-body">
-      <p>First on the job, in <span class="b">Revision brief</span>. That is the box the editor actually reads.</p>
+      <p>The ticket for this round appears by itself, underneath the job. Open it and write the notes in <span class="b">Revision brief</span> on the ticket. That is the box the editor reads, and it is the only place the notes need to go.</p>
       <figure>
         <div class="shot">
-          <div class="shot-bar"><span class="dot"></span> PRO-15 · EP 99 CUTDOWN</div>
+          <div class="shot-bar"><span class="dot"></span> PRO-15 · Internal revision 2</div>
           <div class="shot-body">
             <div class="rowset">
-              <div class="row"><span class="k">Brief document</span><span class="v" style="color:var(--app-muted)">optional link to a deck or PDF</span></div>
               <div class="row mk"><span class="k">Revision brief</span><span class="v">Cut the intro by 3 seconds. Music too loud under the VO. <span class="clickpin">write here</span></span></div>
+              <div class="row"><span class="k">Files for this round</span><span class="v" style="color:var(--app-muted)">attach the PDF, the doc, the extra footage</span></div>
             </div>
           </div>
         </div>
-        <figcaption>Revision brief is rewritten every round. It always holds the round the job is on right now.</figcaption>
+        <figcaption>Revision brief now sits on the ticket, not on the job. Round two's notes stay on round two's ticket for good.</figcaption>
       </figure>
-      <p>Then paste the same notes onto the numbered ticket underneath the job.</p>
+      <p>Each round gets its own numbered ticket, so nothing is ever overwritten.</p>
       <figure>
         <div class="shot">
           <div class="shot-bar"><span class="dot"></span> PRO-15 · Subtasks</div>
@@ -651,11 +657,11 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
         </div>
         <figcaption>The ticket appears by itself. It is created empty, so it is on you to fill it.</figcaption>
       </figure>
-      <p>Yes, that is the same text twice. Revision brief is overwritten next round, so without the copy on the ticket there would be no record of what round two actually asked for. GoodDay cannot copy one box into another, so it has to be a paste.</p>
+      <p>This used to be written twice, once on the job and once on the ticket, because the box on the job was overwritten every round. That box is gone. The notes are written once, on the round they belong to, and they stay there.</p>
 
       <div class="note dont">
         <span class="lab">Never edit the brief at the top</span>
-        <p>The brief at the top of the job is the original ask and it stays untouched for the life of the job. <span class="b">Revision brief</span> is the box that is meant to change. Overwriting the original is the ClickUp habit that lost the studio its history: by round four nobody could see what was first agreed.</p>
+        <p>The brief at the top of the job is the original ask and it stays untouched for the life of the job. Round notes belong on the round's ticket. Overwriting the original is the ClickUp habit that lost the studio its history: by round four nobody could see what was first agreed.</p>
       </div>
     </div>
   </div>
@@ -813,13 +819,13 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
           <div class="shot-bar"><span class="dot"></span> PRO-39 · Client revision 2</div>
           <div class="shot-body" style="padding:0">
             <div class="field">
-              <p class="fl">What the client asked for <span class="clickpin">paste here</span></p>
-              <p class="fh">Their own words. Write them in Revision brief on the job first, then paste the same words here.</p>
+              <p class="fl">Revision brief <span class="clickpin">write here</span></p>
+              <p class="fh">The client's own words, written straight onto this ticket. There is no copy on the job any more.</p>
               <div class="inputbox filled">Cut the intro to 3 seconds, swap the logo sting for the new one, and bring the music under the VO from 0:12.</div>
             </div>
             <div class="field">
-              <p class="fl">Everything they sent <span class="clickpin">paste here</span></p>
-              <p class="fh">Attach the document, the PDF or the extra footage to this ticket, and paste the Frame.io or Drive link in as well.</p>
+              <p class="fl">Files for this round <span class="clickpin">attach here</span></p>
+              <p class="fh">Attach the document, the PDF or the extra footage. Big footage stays on Drive or Frame.io, so paste that link in as well.</p>
               <div class="inputbox filled">https://f.io/a7d2c9 &nbsp;·&nbsp; 2 attachments</div>
             </div>
           </div>
@@ -874,14 +880,14 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
   </figure>
 
   <p>Each ticket holds that round's notes and that round's files. Nothing on a ticket is overwritten. Open a job a month later and you can read the whole history in order: the original brief at the top of the job, then every round underneath it.</p>
-  <p><span class="f">Revision brief</span> on the job is the exception. It is deliberately overwritten each round, because its job is to answer one question: what is this job waiting on right now.</p>
+  <p>There is no longer a copy on the job. <span class="f">Revision brief</span> and <span class="f">Files for this round</span> exist once per ticket, so the question &ldquo;what did round two actually ask for&rdquo; always has an answer.</p>
 
   <div class="tbl-scroll">
     <table>
       <thead><tr><th>Lives on the job</th><th>Lives on the round's ticket</th></tr></thead>
       <tbody>
         <tr><td>The brief at the top, never edited</td><td>What to change this round, kept for good</td></tr>
-        <tr><td><span class="f">Revision brief</span>, this round only</td><td>The paste that keeps the record</td></tr>
+        <tr><td>The original brief and the main asset</td><td><span class="f">Revision brief</span>, this round's notes</td></tr>
         <tr><td><span class="f">Deadline</span>, the live date</td><td>The files and links for this round</td></tr>
         <tr><td>The round counters</td><td>Whether the round is finished</td></tr>
       </tbody>
@@ -964,9 +970,9 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 
   <h3 style="font-size:17.5px;font-weight:600;margin:0 0 10px">The short version</h3>
   <ol>
-    <li><strong>SPV:</strong> <span class="f">Review result</span> at SENT TO SPV. Set the new <span class="f">Deadline</span> whenever you send it back, and write <span class="f">Revision brief</span>.</li>
+    <li><strong>SPV:</strong> <span class="f">Review result</span> at SENT TO SPV. Set the new <span class="f">Deadline</span> on the job whenever you send it back, and write <span class="f">Revision brief</span> on the new ticket.</li>
     <li><strong>Julius at final review:</strong> <span class="f">Final approval</span>. Approving means it goes out today.</li>
-    <li><strong>Julius at SENT TO CLIENT:</strong> <span class="f">Review result</span> again. Client notes go in <span class="f">Revision brief</span> and get pasted onto the ticket. Never in the brief at the top.</li>
+    <li><strong>Julius at SENT TO CLIENT:</strong> <span class="f">Review result</span> again. Client notes go on the new ticket, in <span class="f">Revision brief</span>, with anything they sent in <span class="f">Files for this round</span>. Never in the brief at the top.</li>
     <li><strong>Everyone:</strong> one date box moves, and it is <span class="f">Deadline</span>.</li>
     <li><strong>Attendance:</strong> set the approval field, never the status. Paid leave is a deliberate choice.</li>
   </ol>
