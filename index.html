@@ -569,7 +569,6 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
               <div class="row"><span class="k">Action required</span><span class="v">You</span></div>
               <div class="row"><span class="k">Deadline</span><span class="v">Sep 18</span></div>
               <div class="row mk"><span class="k">Review result</span><span class="v" style="color:var(--app-muted)">empty <span class="clickpin">click</span></span></div>
-              <div class="row"><span class="k">Final approval</span><span class="v" style="color:var(--app-muted)">empty. Julius's box</span></div>
             </div>
           </div>
         </div>
@@ -693,7 +692,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
 <!-- 5 -->
 <section id="final">
   <div class="sec-head"><span class="sec-num">05</span><h2>Julius at final review</h2></div>
-  <p>A different box from the SPV's. That is on purpose.</p>
+  <p>The same Review result box the SPV uses, with an answer of its own: <span class="b">Send to client</span>.</p>
 
   <div class="step">
     <div class="step-h"><span class="step-n">1</span><h3>You get a message when one reaches you</h3></div>
@@ -702,15 +701,15 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
         <div class="msg">
           <p class="h">🎯 Final review - your call</p>
           <p>🎯 This one passed the SPV and is now your call.</p>
-          <p>Your field is <span class="b">Final approval</span>, not Review result, which belongs to the SPV. Set it to <span class="b">Approved</span> or <span class="b">Needs revision</span>.</p>
-          <p>⚠️ <span class="b">Approving sends it.</span> The job moves itself straight to <span class="b">SENT TO CLIENT</span> and today is stamped as the day the client got it, so only approve when the file is actually going out today.</p>
+          <p>Answer in Review result: <span class="b">Send to client</span>, or <span class="b">Needs revision</span> to send it back to the editor. Approved is not for this stage; it belongs to the SPV and to the client's answer later.</p>
+          <p>⚠️ <span class="b">Send to client means it goes out today.</span> The job moves itself straight to <span class="b">SENT TO CLIENT</span> and today is stamped as the day the client got it, so only pick it when the file is actually going out today.</p>
         </div>
       </figure>
     </div>
   </div>
 
   <div class="step">
-    <div class="step-h"><span class="step-n">2</span><h3>Use Final approval, not Review result</h3></div>
+    <div class="step-h"><span class="step-n">2</span><h3>Pick Send to client or Needs revision</h3></div>
     <div class="step-body">
       <figure>
         <div class="shot">
@@ -719,26 +718,25 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
             <div class="rowset">
               <div class="row"><span class="k">Status</span><span class="v"><span class="st" style="--c:var(--s-final)">FINAL REVIEW</span></span></div>
               <div class="row"><span class="k">Action required</span><span class="v">You</span></div>
-              <div class="row"><span class="k">Review result</span><span class="v" style="color:var(--app-muted)">empty. Not this one</span></div>
-              <div class="row mk"><span class="k">Final approval</span><span class="v" style="color:var(--app-muted)">empty <span class="clickpin">click</span></span></div>
+              <div class="row mk"><span class="k">Review result</span><span class="v" style="color:var(--app-muted)">empty <span class="clickpin">click</span></span></div>
             </div>
           </div>
         </div>
-        <figcaption>If you set Review result here by mistake, the board will tell you. It clears the box and sends you a note saying which one you wanted.</figcaption>
+        <figcaption>It arrives empty. If you pick Approved here by habit, the board clears it and tells you which answer you wanted.</figcaption>
       </figure>
 
       <figure>
         <div class="msg">
-          <p class="h">⚠️ Wrong box, nothing moved</p>
-          <p>You set <span class="b">Review result</span> on <span class="b">EP 99 CUTDOWN</span>, but this job is at <span class="b">FINAL REVIEW</span>. That gate does not read Review result, so nothing has moved.</p>
-          <p>I have cleared the box for you. Open the job and set <span class="b">Final approval</span> instead. Approved sends it to the client. Needs revision sends it back to the editor.</p>
+          <p class="h">⚠️ Wrong option, nothing moved</p>
+          <p>You picked <span class="b">Approved</span> on <span class="b">EP 99 CUTDOWN</span>, but this job is at <span class="b">FINAL REVIEW</span>. Approved is the SPV's answer and the client's answer, so nothing has moved.</p>
+          <p>I have cleared the box for you. At final review pick <span class="b">Send to client</span> to send it out, or <span class="b">Needs revision</span> to send it back to the editor.</p>
         </div>
-        <figcaption>The guard. Without it the wrong box would fail in silence, which is the kind of thing that makes people give up on a new system.</figcaption>
+        <figcaption>The guard. Without it the wrong option would fail in silence, which is the kind of thing that makes people give up on a new system.</figcaption>
       </figure>
 
       <div class="split">
         <div class="outcome">
-          <p class="ot" style="color:var(--ok)">Approved</p>
+          <p class="ot" style="color:var(--ok)">Send to client</p>
           <p>Goes straight to <span class="st" style="--c:var(--s-creview)">SENT TO CLIENT</span>, and today is stamped as the day the client got it.</p>
         </div>
         <div class="outcome">
@@ -748,13 +746,13 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
       </div>
 
       <div class="note watch">
-        <span class="lab">Approving sends it</span>
-        <p>The moment you approve, the board stamps today as the day the file went to the client. If it is actually going out tomorrow, that number is wrong and so is every report built on it. Only approve when the file is going out that day.</p>
+        <span class="lab">Send to client sends it</span>
+        <p>The moment you pick it, the board stamps today as the day the file went to the client. If it is actually going out tomorrow, that number is wrong and so is every report built on it. Only pick it when the file is going out that day.</p>
       </div>
 
       <div class="note auto">
-        <span class="lab">Why two boxes</span>
-        <p>If both gates read the same field, one SPV approval can carry a job through your gate and out the door. That happened in testing on 12 September. Separating them means your check cannot be skipped, including by accident.</p>
+        <span class="lab">Why your answer is not called Approved</span>
+        <p>The SPV's Approved is what moves a job into final review. If Approved also meant send to client, that one SPV click would carry the job through your gate and out the door. It happened in testing on 12 and 26 September. Giving your approval its own name means your check cannot be skipped, including by accident. Tested end to end on 27 September, twenty-three checks, all passing.</p>
       </div>
     </div>
   </div>
@@ -949,7 +947,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
         <tr><td>A job is created on the form</td><td>The SPV and Joshua are added to it, the editor is briefed, and a freelancer job goes to Julius</td></tr>
         <tr><td>Status reaches SENT TO SPV</td><td>The named SPV is messaged and the job enters their list</td></tr>
         <tr><td>SPV approves</td><td>Status becomes FINAL REVIEW, Julius is messaged, Review result is cleared</td></tr>
-        <tr><td>Julius sets Final approval to Approved</td><td>Status becomes SENT TO CLIENT and the sent to client date is stamped</td></tr>
+        <tr><td>Julius picks Send to client at final review</td><td>Status becomes SENT TO CLIENT and the sent to client date is stamped</td></tr>
         <tr><td>Anyone asks for changes</td><td>Status moves back, the round counter goes up by one, a numbered ticket is made and given to the editor, the editor is told, and you and Julius are asked to set the new Deadline</td></tr>
         <tr><td>Every ticket on a job is set to ROUND DONE</td><td>The job moves itself back to SENT TO SPV and the SPV is messaged</td></tr>
         <tr><td>Client approves</td><td>Status becomes APPROVED, date done is stamped, the list is cleared</td></tr>
@@ -971,7 +969,7 @@ footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px
   <h3 style="font-size:17.5px;font-weight:600;margin:0 0 10px">The short version</h3>
   <ol>
     <li><strong>SPV:</strong> <span class="f">Review result</span> at SENT TO SPV. Set the new <span class="f">Deadline</span> on the job whenever you send it back, and write <span class="f">Revision brief</span> on the new ticket.</li>
-    <li><strong>Julius at final review:</strong> <span class="f">Final approval</span>, never Review result. Approved means it goes out today.</li>
+    <li><strong>Julius at final review:</strong> <span class="f">Review result</span> = Send to client or Needs revision, never Approved. Send to client means it goes out today.</li>
     <li><strong>Julius at SENT TO CLIENT:</strong> <span class="f">Review result</span> again. Client notes go on the new ticket, in <span class="f">Revision brief</span>, with anything they sent in <span class="f">Files for this round</span>. Never in the brief at the top.</li>
     <li><strong>Everyone:</strong> one date box moves, and it is <span class="f">Deadline</span>.</li>
     <li><strong>Attendance:</strong> answer with <span class="f">Approve this absence?</span>, never by moving the status. Jobs and absences work the same way: you set the box and the board moves the status for you. Paid leave is a deliberate choice.</li>
